@@ -1,0 +1,12 @@
+package arraysAndStrings;
+
+public class ReplaceSpaces {
+	
+	public static void main(String[] args){
+		
+	}
+	
+	public boolean replaceSpaces(String s){
+		
+	}
+}

@@ -1,0 +1,35 @@
+package smallProjects;
+/**
+ * Calculates the angles between the hour and minute hands on a clock
+ * Accounts for entering an hour value <= 24 
+ * @author zacharilius
+ *
+ */
+public class CalcAngBetMinHourHands {
+	public static void main(String[] args){
+		System.out.println(calculate(12, 30));
+	}
+	public static double calculate(int hour, int minute){
+		//Throws new error for incorrect valued numbers
+		if(minute > 60 || minute <= 0){
+			throw new Error("Minute must be >= 0 and < 60");
+		}
+		if(hour >= 24 || hour < 0){
+			throw new Error("Hour must be > 0 and <= 24");
+		}
+		
+		//Fixes the hour in case received hour > 12 and <= 24
+		int modHour = hour % 13;
+		
+		//Calculates minute degrees
+		double minuteDegrees = (double)((double)(minute / 60) * 360);
+		
+		
+		
+		//Calculates hour degrees
+		double hourDegrees = ((((minuteDegrees / 360) + modHour) / 12) * 360);
+		System.out.println(minuteDegrees + " : " + hourDegrees);
+		return Math.abs(hourDegrees - minuteDegrees);		
+	}
+
+}

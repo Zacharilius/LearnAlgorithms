@@ -1,0 +1,17 @@
+package smallProjects;
+
+public class CalcAngBetMinHourHands {
+	public static double calculate(int minute, int hour){
+		if(minute > 60){
+			throw new Error("Minute is greater than 60");
+		}
+		
+		int modMinute = minute % 60;
+		int modHour 
+		
+		
+		
+		return 0.0;
+	}
+
+}

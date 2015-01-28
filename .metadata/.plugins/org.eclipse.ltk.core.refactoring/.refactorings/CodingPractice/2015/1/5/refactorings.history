@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;smallProjects.CalculateAngleBetweenMinHourHands.java&apos; to &apos;CalcAngBetMinHourHands.java&apos;&#x0A;- Original project: &apos;CodingPractice&apos;&#x0A;- Original element: &apos;smallProjects.CalculateAngleBetweenMinHourHands.java&apos;&#x0A;- Renamed element: &apos;smallProjects.CalcAngBetMinHourHands.java&apos;" description="Rename compilation unit &apos;CalculateAngleBetweenMinHourHands.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;smallProjects{CalculateAngleBetweenMinHourHands.java" name="CalcAngBetMinHourHands.java" references="false" stamp="1422184844049" version="1.0"/>
+</session>

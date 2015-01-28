@@ -1,0 +1,14 @@
+package general;
+
+public class findStartCircularArray {
+
+	public static void main(String[] args) {
+		int[] circArr = {4,5,6,6,7,1,1,2,3,4};
+		int startPos = findMIddle(circArr);
+	}
+	
+	public static int findMiddle(int[] circArr){
+		
+	}
+
+}

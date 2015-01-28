@@ -1,0 +1,17 @@
+package smallProjects;
+
+public class CalcAngBetMinHourHands {
+
+	public static void main(String[] args) {
+		calculate()
+
+	}
+	public static double calculate(int minute, int hour){
+		
+		
+		
+		
+		return 0.0;
+	}
+
+}

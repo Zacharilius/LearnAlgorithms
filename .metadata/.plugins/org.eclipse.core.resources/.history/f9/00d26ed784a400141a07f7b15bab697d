@@ -1,0 +1,13 @@
+package smallProjects;
+
+public class CalcAngBetMinHourHands {
+
+	public static double calculate(int minute, int hour){
+		
+		
+		
+		
+		return 0.0;
+	}
+
+}

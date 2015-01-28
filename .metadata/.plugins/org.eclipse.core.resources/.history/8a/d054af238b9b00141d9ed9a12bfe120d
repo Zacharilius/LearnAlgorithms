@@ -1,0 +1,39 @@
+package testPackage;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import arraysAndStrings.*;
+
+public class TestCase {
+
+	//Test uniqueCharsString_1_1
+	@Test
+	public void test_1_1() {
+		assertEquals("'abba' is false", false, UniqueCharsString_1_1.uniqueCharString("abba"));
+		assertEquals("'ab' is true", true, UniqueCharsString_1_1.uniqueCharString("ab"));
+		assertEquals("'ABCDEfghijk' is true", true, UniqueCharsString_1_1.uniqueCharString("ABCDEfghijk"));
+		assertEquals("'Rasst' is false", false, UniqueCharsString_1_1.uniqueCharString("Rasst"));
+		assertEquals("'Poople' is false", false, UniqueCharsString_1_1.uniqueCharString("Poople"));
+	}
+	
+	//Test ArrayAnagramPermutation_1_3
+	@Test
+	public void test_1_3(){
+		assertEquals("'abba' and 'baab' are true", true, ArrayAnagramPermutation_1_3.stringsPermutation("abba", "baab"));
+		assertEquals("'abba' and 'boob' are true", false, ArrayAnagramPermutation_1_3.stringsPermutation("abba", "boob"));
+		assertEquals("'abcdefg' and 'gfedcba' are true", true, ArrayAnagramPermutation_1_3.stringsPermutation("abcdefg", "gfedcba"));
+	}
+	
+	//Test ReplaceSpaces_1_4
+	@Test
+	public void test_1_4(){
+		assertEquals("Double double toil and trouble", "Double%20double%20toil%20and%20trouble", 
+				ReplaceSpaces_1_4.replaceSpaces("Double double toil and trouble"));
+	}
+
+	//Test StringCompression_1_5
+	@Test
+	public void test_1_5(){
+		assertEquals("'aaabbcd' is a3b3c1d1", true, ArrayAnagramPermutation_1_3.stringsPermutation("abcdefg", "gfedcba"));
+	}
+}
