@@ -1,0 +1,81 @@
+package testPackage;
+
+import static org.junit.Assert.*;
+
+import java.util.Random;
+
+import general.FindStartCircularArray;
+
+import org.junit.Test;
+
+import smallProjects.CalcAngBetMinHourHands;
+import arraysAndStrings.*;
+
+public class TestCase {
+
+	//Test uniqueCharsString_1_1
+	@Test
+	public void test_1_1() {
+		assertEquals("'abba' is false", false, UniqueCharsString_1_1.uniqueCharString("abba"));
+		assertEquals("'ab' is true", true, UniqueCharsString_1_1.uniqueCharString("ab"));
+		assertEquals("'ABCDEfghijk' is true", true, UniqueCharsString_1_1.uniqueCharString("ABCDEfghijk"));
+		assertEquals("'Rasst' is false", false, UniqueCharsString_1_1.uniqueCharString("Rasst"));
+		assertEquals("'Poople' is false", false, UniqueCharsString_1_1.uniqueCharString("Poople"));
+	}
+	
+	//Test ArrayAnagramPermutation_1_3
+	@Test
+	public void test_1_3(){
+		assertEquals("'abba' and 'baab' are true", true, ArrayAnagramPermutation_1_3.stringsPermutation("abba", "baab"));
+		assertEquals("'abba' and 'boob' are true", false, ArrayAnagramPermutation_1_3.stringsPermutation("abba", "boob"));
+		assertEquals("'abcdefg' and 'gfedcba' are true", true, ArrayAnagramPermutation_1_3.stringsPermutation("abcdefg", "gfedcba"));
+	}
+	
+	//Test ReplaceSpaces_1_4
+	@Test
+	public void test_1_4(){
+		assertEquals("Double double toil and trouble", "Double%20double%20toil%20and%20trouble", 
+				ReplaceSpaces_1_4.replaceSpaces("Double double toil and trouble"));
+	}
+
+	//Test StringCompression_1_5
+	@Test
+	public void test_1_5(){
+		//assertEquals("'aaabbcd' is a3b3c1d1", true, StringCompression_1_5.compressString("aaabbcd"));
+	}
+	
+	//Tests the angle between the hour and minute hands
+	@Test
+	public void testTimeAngles(){
+		assertEquals("'12', '30' is 165", 165, CalcAngBetMinHourHands.calculate(12, 30), .1);
+		assertEquals("'1', '30' is 180", 135, CalcAngBetMinHourHands.calculate(1, 30), .1);
+		assertEquals("'2', '30' is 195", 105, CalcAngBetMinHourHands.calculate(2, 30), .1);
+		assertEquals("'5', '37' is 53.5", 53.5, CalcAngBetMinHourHands.calculate(5, 37), .1);
+	}
+	
+	//Test to make sure the modified binary search finds the lowest value.
+	@Test
+	public void testFindStartCircularArray(){
+		int[] sortedArray =  {0,0,1,2,3,4,5,6,7,8,9,10,11,12,12,13,13,14,16,17};
+		Random r = new Random();
+		
+		int i = 0;
+		while(i < 100){
+			int[] testArr = new int[sortedArray.length];
+			for(int j = 0; i < sortedArray.length; i++){
+				int  randPos = r.nextInt(sortedArray.length - 1);
+				testArr[j] = sortedArray[randPos % sortedArray.length];
+				randPos++;
+				assertEquals("Position XXX", 0, FindStartCircularArray.findMiddle(testArr), 0);
+			}
+		}
+		
+		
+		assertEquals("Position 0", 0, FindStartCircularArray.findMiddle(new int[] {1,2,3,4,5,6,7,8,9,10,11,12,12,13}), 0);
+		assertEquals("Position 0 that repeats", 0, FindStartCircularArray.findMiddle(new int[] {1,1,2,3,4,5,6,7,8,9,10,11,12,12,13}), 0);
+		assertEquals("In the middle", 6, FindStartCircularArray.findMiddle(new int[] {5,5,6,7,8,9,1,2,2,3,4,5}), 0);
+		assertEquals("Last position", 14, FindStartCircularArray.findMiddle(new int[] {1,2,3,4,5,6,7,8,9,10,11,12,12,13,1}), 0);
+		assertEquals("Last position that repeats", 14, FindStartCircularArray.findMiddle(new int[] {1,2,3,4,5,6,7,8,9,10,11,12,12,13, 1,1}), 0);
+
+	}
+}

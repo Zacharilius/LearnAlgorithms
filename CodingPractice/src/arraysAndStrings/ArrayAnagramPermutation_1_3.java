@@ -17,13 +17,13 @@ public class ArrayAnagramPermutation_1_3 {
 		}
 		char[] aChar = a.toCharArray();
 		char[] bChar = b.toCharArray();
-		System.out.println(new String(aChar));
-		System.out.println(new String(bChar));
+		//System.out.println(new String(aChar));
+		//System.out.println(new String(bChar));
 		
 		java.util.Arrays.sort(aChar);
 		java.util.Arrays.sort(bChar);
-		System.out.println(new String(aChar));
-		System.out.println(new String(bChar));
+		//System.out.println(new String(aChar));
+		//System.out.println(new String(bChar));
 		
 		
 		

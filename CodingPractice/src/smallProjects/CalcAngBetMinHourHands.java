@@ -7,7 +7,7 @@ package smallProjects;
  */
 public class CalcAngBetMinHourHands {
 	public static void main(String[] args){
-		System.out.println(calculate(12, 30));
+		//System.out.println(calculate(12, 30));
 	}
 	public static double calculate(int hour, int minute){
 		//Throws new error for incorrect valued numbers
@@ -26,7 +26,7 @@ public class CalcAngBetMinHourHands {
 		
 		//Calculates hour degrees
 		double hourDegrees = ((((minuteDegrees / 360) + modHour) / 12) * 360) % 360;
-		System.out.println(minuteDegrees + " : " + hourDegrees);
+		//System.out.println(minuteDegrees + " : " + hourDegrees);
 		return Math.abs(hourDegrees - minuteDegrees);		
 	}
 
