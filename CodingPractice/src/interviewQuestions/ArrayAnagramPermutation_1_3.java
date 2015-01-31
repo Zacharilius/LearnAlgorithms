@@ -1,4 +1,4 @@
-package arraysAndStrings;
+package interviewQuestions;
 
 public class ArrayAnagramPermutation_1_3 {
 	public static void main(String args[]){

@@ -1,15 +1,14 @@
 package testPackage;
 
 import static org.junit.Assert.*;
+import interviewQuestions.*;
 
 import java.util.Random;
 
-import general.FindStartCircularArray;
-
 import org.junit.Test;
 
-import smallProjects.CalcAngBetMinHourHands;
-import arraysAndStrings.*;
+import codingPractice.CalcAngBetMinHourHands;
+import codingPractice.FindStartCircularArray;
 
 public class TestCase {
 
@@ -41,7 +40,10 @@ public class TestCase {
 	//Test StringCompression_1_5
 	@Test
 	public void test_1_5(){
-		//assertEquals("'aaabbcd' is a3b3c1d1", true, StringCompression_1_5.compressString("aaabbcd"));
+		assertEquals("'aaabbcddd' is a3b2c1d3", "a3b2c1d3", StringCompression_1_5.compressString("aaabbcddd"));
+		assertEquals("'aabcccccaaa' is a2b1c5a3.", "a2b1c5a3", StringCompression_1_5.compressString("aabcccccaaa"));
+		assertEquals("'abcdefg' is abcdefg.", "abcdefg", StringCompression_1_5.compressString("abcdefg"));
+
 	}
 	
 	//Tests the angle between the hour and minute hands
@@ -66,7 +68,7 @@ public class TestCase {
 			for(int j = 0; j < sortedArray.length; j++){
 				testArr[j] = sortedArray[(randPos + j) % sortedArray.length];
 			}
-			assertEquals("Position XXX", (sortedArray.length - randPos) % sortedArray.length, FindStartCircularArray.findMiddle(testArr), 0);
+			assertEquals("Position XXX", (sortedArray.length - randPos) % sortedArray.length, FindStartCircularArray.findSmallestInt(testArr), 0);
 			i++;
 		}
 	}

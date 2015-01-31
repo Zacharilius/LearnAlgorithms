@@ -1,4 +1,4 @@
-package arraysAndStrings;
+package interviewQuestions;
 
 public class ReplaceSpaces_1_4 {
 	

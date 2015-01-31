@@ -1,4 +1,4 @@
-package arraysAndStrings;
+package interviewQuestions;
 
 public class UniqueCharsString_1_1 {
 

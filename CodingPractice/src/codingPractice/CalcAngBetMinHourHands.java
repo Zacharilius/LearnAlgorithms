@@ -1,4 +1,4 @@
-package smallProjects;
+package codingPractice;
 /**
  * Calculates the angles between the hour and minute hands on a clock
  * Accounts for entering an hour value <= 24 
