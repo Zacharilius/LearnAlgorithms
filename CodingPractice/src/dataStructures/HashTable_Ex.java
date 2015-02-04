@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import sampleCode.Student;
 
-public class HashTable {
+public class HashTable_Ex {
 
 	public static void main(String[] args) {
 		Student[] students = {

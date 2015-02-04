@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import codingPractice.CalcAngBetMinHourHands;
 import codingPractice.FindStartCircularArray;
+import dataStructures.SLList;
 
 public class TestCase {
 
@@ -72,5 +73,20 @@ public class TestCase {
 			i++;
 		}
 	}
-	
+	// Test to remove duplicates from a linked list 
+	@Test
+	public void testRemoveDuplicatesLinkedList_2_1(){
+		SLList list = new SLList();
+		list.append(5);
+		list.append(22);
+		list.append(21);
+		list.append(0);
+		list.append(5);
+		list.append(22);
+		list.append(21);
+		list.append(0);
+		
+		
+		
+	}
 }

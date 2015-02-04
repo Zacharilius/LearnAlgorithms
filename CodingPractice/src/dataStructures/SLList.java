@@ -1,5 +1,7 @@
 package dataStructures;
 
+import java.util.Hashtable;
+
 public class SLList {
 	private SLListNode head;
 	
@@ -10,11 +12,10 @@ public class SLList {
 		head = null;
 	}
 	//appends node to the end of the SLList
-	public boolean append(int data){
+	public void append(int data){
 		//SLList is empty
 		if(head == null){
 			head = new SLListNode(data);
-			return true;
 		}
 		//SLList is not empty
 		else{
@@ -23,8 +24,12 @@ public class SLList {
 				currNode = currNode.getNext();
 			}
 			currNode.setNext(new SLListNode(data));
-			return true;
 		}
+	}
+	public void prepend(int data){
+		SLListNode temp = new SLListNode(data);
+		temp.setNext(head);
+		head = temp;
 	}
 	public String toString(){
 		StringBuffer buff = new StringBuffer();
@@ -78,4 +83,28 @@ public class SLList {
 		}
 		//Check last node
 		return false;	}
+	public SLListNode getHead() {
+		return head;
+	}
+	public void setHead(SLListNode head) {
+		this.head = head;
+	}
+	public void removeDuplicates(){
+		Hashtable hash = new Hashtable();
+		SLListNode currNode = head;
+
+		while(currNode.getNext() != null){
+			if(hash.containsKey(currNode.getData())){
+				remove(currNode.getData());
+			}
+			else{
+				hash.put(currNode.getData(), true);
+			}
+			currNode = currNode.getNext();
+		}
+		// Checks last node
+		if(hash.containsKey(currNode.getData())){
+			remove(currNode.getData());
+		}
+	}
 }
